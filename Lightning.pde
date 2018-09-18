@@ -2,6 +2,7 @@ int startX = 300;
 int startY = 0;
 int endX = 0;
 int endY = 0;
+int x = 20;
 
 void setup()
 {
@@ -21,6 +22,13 @@ void draw()
   		startX = endX;
   		startY = endY;
   	}
+  stroke(10,10,10);
+  strokeWeight(1);
+  while (x < 600)
+	{
+		x = x + 20;
+	    clouds();
+	}
 }
 
 void mousePressed()
@@ -32,7 +40,8 @@ void mousePressed()
   endY = 0;
 }
 
-void cityBuildings()
+void clouds()
 {
-  
+  fill(154);
+  ellipse(x,50,80,30);
 }
