@@ -7,8 +7,8 @@ int x = 20;
 void setup()
 {
   size(600,600);
-  strokeWeight(5);
-  background(10);
+  strokeWeight(2);
+  background(30,27,88);
 }
 
 void draw()
@@ -22,19 +22,13 @@ void draw()
   		startX = endX;
   		startY = endY;
   	}
-  stroke(10,10,10);
-  strokeWeight(1);
-  while (x < 600)
-	{
-		x = x + 20;
-	    clouds();
-	}
+  clouds();
 }
 
 void mousePressed()
 {
-  background(10);
-  startX = (int)(Math.random()*500)+50;
+  background(30,27,88);
+  startX = (int)(Math.random()*400)+50;
   startY = 0;
   endX = 0;
   endY = 0;
@@ -42,6 +36,7 @@ void mousePressed()
 
 void clouds()
 {
-  fill(154);
-  ellipse(x,50,80,30);
+  noStroke();
+  fill(175);
+  ellipse(600-60,60,100,100);
 }
